@@ -1,0 +1,10 @@
+//aca se configura el redireccionamiento entre componentes
+import {RouterModule,Routes} from '@angular/router'; //importaciones necesarias
+import {HomeComponent} from './components/home/home.component';
+
+const APP_ROUTES: Routes = [
+  {path:'home',component:HomeComponent}, //path:nombre a agreagar al link  /home  component: l componente
+  {path:'**',pathMatch:'full',redirectTo:'' }
+];
+
+export const APP_ROUTING=RouterModule.forRoot(APP_ROUTES);
